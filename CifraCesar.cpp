@@ -11,11 +11,12 @@ int main() {
     while(continuar=='S'){
         cout<<"Insira a palavra a ser criptografada."<<endl;
         cin >> palavra;
+        
         cout<<"Insira a chave para criptografar"<<endl;
         cin >> chave;
         
         for(int j = 0;j < palavra.size(); j++){
-
+            palavra[j]=tolower(palavra[j]);
             if((palavra[j] + chave) > 122){
                 palavra[j] = palavra[j]-26;
             }
